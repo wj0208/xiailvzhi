@@ -1,0 +1,75 @@
+* {
+  font-family: "微软雅黑";
+}
+.header {
+  position: absolute;
+  overflow: hidden;
+  height: 80px;
+  width: 100%;
+  top: 0;
+}
+.footer {
+  overflow: hidden;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+body {
+  overflow-x: hidden;
+}
+.btns li {
+  display: inline-block;
+  width: 30%;
+  line-height: 60px;
+  text-align: center;
+}
+.btns li:hover {
+  background: #ccc;
+}
+h4 {
+  color: red;
+}
+.list-group a {
+  text-decoration: none;
+  color: #000;
+}
+.media-body .undeline {
+  border-bottom: 1px #ccc solid;
+}
+.breadcrumb {
+  margin-bottom: 0;
+}
+.page-header {
+  margin: 0;
+}
+.table > tbody > tr > td {
+  vertical-align: middle;
+}
+.page {
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden;
+  top: 80px;
+  bottom: 100px;
+}
+.page.ng-leave,
+.page.ng-enter {
+  transition: .5s;
+}
+.page.ng-leave {
+  left: 0;
+  opacity: 1;
+}
+.page.ng-leave.ng-leave-active {
+  left: 100%;
+  opacity: 0;
+}
+.page.ng-enter {
+  left: -100%;
+  opacity: 0;
+}
+.page.ng-enter.ng-enter-active {
+  left: 0;
+  opacity: 1;
+}

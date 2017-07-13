@@ -1,0 +1,23 @@
+<div class="container">
+	<ul class="breadcrumb">
+		<li><a href="#/main">首页</a></li>
+		<li>详情</li>
+	</ul>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="page-header">
+				<h2 class="text-info">{{dish.name}}</h2>
+				<hr />
+				<img class="img-responsive" ng-src="img/{{dish.img_lg}}"/>
+			</div>
+			<p><span class="text-primary">特点: </span>{{dish.material}}</p>
+			<br>
+			<p><span class="text-primary">详细介绍: </span>{{dish.detail}}</p>
+			<h4>{{dish.price | currency:'￥'}}</h4>
+		</div>
+		<div class="panel-footer text-right">
+			<button type="button" ng-click="jump('/order/'+dishid)" class="btn btn-success">我要购买</button>
+			<button type="button" ng-click="jump('/main')" class="btn btn-warning">我在看看</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<!--<div ng-include="'tpl/include/header.html'"></div>-->
+<div class="container">
+	<h2 class="text-center">我的订单</h2>
+	<div ng-show="emptyBox" class="alert alert-warning">
+		<p>{{emptyBox}}</p>
+	</div>
+	<table class="table table-striped" ng-hide="emptyBox">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>植物名称</th>
+				<th>下单时间</th>
+				<th>联系人</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="myOrder in myOrders">
+				<td>{{myOrder.oid}}</td>
+				<td>
+					<img class="img-responsive" ng-src="img/{{myOrder.img_sm}}"/>
+				</td>
+				<td>{{myOrder.order_time | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+				<td>{{myOrder.user_name}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

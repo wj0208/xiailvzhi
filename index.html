@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="kafanla">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-animate.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-controller="parentCtrl">
+		<div ng-include="'tpl/include/header.html'" ng-hide="hide"></div>
+		<div ng-view class="page"></div>
+		<div ng-include="'tpl/include/footer.html'" ng-hide="hide"></div>
+	</body>
+</html>

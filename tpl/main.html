@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="form-group has-feedback">
+		<input type="text" class="form-control" ng-model="kw" placeholder="搜索植物名称或相关内容..."/>
+		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+	</div>
+	<ul class="list-group">
+		<li class="list-group-item media" ng-repeat="menu in menulists">
+			<a href="#/detail/{{menu.did}}">
+				<div class="media-left media-middle">
+					<img class="media-object" ng-src="img/{{menu.img_sm}}"/>
+				</div>
+				<div class="media-body">
+					<h3 class="text-info">{{menu.name}}</h3>
+					<hr />
+					<p><span class="text-primary">特点：</span>{{menu.material}}</p>
+					<h4>{{menu.price | currency:'￥'}}</h4>
+				</div>
+			</a>
+		</li>
+	</ul>
+	<button type="button" class="btn-success form-control" ng-click="loadMore()" ng-show="hasmore">加载更多</button>
+	<p class="alert alert-warning" ng-hide="hasmore"><span class="glyphicon glyphicon-alert"></span>没有更多数据了！</p>
+</div>
